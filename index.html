@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftServe Colombia y el Pacto Global de la ONU</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Agregar Font Awesome para los íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>SoftServe Colombia y su Compromiso con el Pacto Global de la ONU</h1>
+        <p>Acciones concretas y metas alcanzadas por SoftServe en línea con los 10 principios del Pacto Global.</p>
+    </header>
+
+    <main>
+        <section class="infographic">
+            <article class="action-item" id="derechos-humanos">
+                <h2>Derechos Humanos</h2>
+                <!-- Icono de Derechos Humanos -->
+                <i class="fas fa-gavel icon" aria-label="Derechos Humanos"></i>
+                <p>SoftServe promueve los derechos humanos y respeta la igualdad y la no discriminación.</p>
+                <button class="more-info-btn" aria-label="Más información sobre Derechos Humanos" 
+                    data-title="Derechos Humanos" 
+                    data-text="SoftServe promueve y apoya los derechos humanos a nivel global, asegurando un entorno laboral inclusivo y respetuoso. La compañía ha implementado políticas que apoyan la igualdad de oportunidades y luchan contra cualquier forma de discriminación. Además, SoftServe participa activamente en programas educativos sobre derechos humanos y trabaja con organizaciones que promueven estas causas.">
+                    Ver más
+                </button>
+            </article>
+
+            <article class="action-item" id="sostenibilidad">
+                <h2>Sostenibilidad Ambiental</h2>
+                <!-- Icono de Sostenibilidad Ambiental -->
+                <i class="fas fa-recycle icon" aria-label="Sostenibilidad Ambiental"></i>
+                <p>Compromiso con la reducción de la huella de carbono y el uso de energías renovables.</p>
+                <button class="more-info-btn" aria-label="Más información sobre Sostenibilidad Ambiental" 
+                    data-title="Sostenibilidad Ambiental" 
+                    data-text="SoftServe se ha comprometido a reducir su impacto ambiental mediante el uso de energías renovables, la optimización del consumo energético en sus instalaciones, y la compensación de las emisiones de carbono generadas. La empresa implementa prácticas de sostenibilidad en todas sus operaciones, incluidas la gestión de residuos y la economía circular, con el objetivo de minimizar la huella ambiental de sus actividades.">
+                    Ver más
+                </button>
+            </article>
+
+            <article class="action-item" id="normas-laborales">
+                <h2>Normas Laborales</h2>
+                <!-- Icono de Normas Laborales -->
+                <i class="fas fa-users icon" aria-label="Normas Laborales"></i>
+                <p>Promoción de la igualdad de género y la libertad de asociación en el trabajo.</p>
+                <button class="more-info-btn" aria-label="Más información sobre Normas Laborales" 
+                    data-title="Normas Laborales" 
+                    data-text="SoftServe apoya los principios fundamentales del trabajo, tales como la igualdad de género, la libertad de asociación y la eliminación del trabajo infantil. La empresa asegura que sus empleados tengan acceso a condiciones laborales justas, con un salario digno y oportunidades de desarrollo profesional. Además, SoftServe apoya activamente iniciativas globales que buscan promover la igualdad y la justicia en el ámbito laboral.">
+                    Ver más
+                </button>
+            </article>
+
+            <article class="action-item" id="anticorrupcion">
+                <h2>Anticorrupción</h2>
+                <!-- Icono de Anticorrupción -->
+                <i class="fas fa-handshake icon" aria-label="Anticorrupción"></i>
+                <p>Implementación de políticas anticorrupción que aseguran la ética en las operaciones.</p>
+                <button class="more-info-btn" aria-label="Más información sobre Anticorrupción" 
+                    data-title="Anticorrupción" 
+                    data-text="SoftServe está firmemente comprometido con la lucha contra la corrupción en todas sus formas. La empresa implementa políticas estrictas para garantizar que todas las operaciones se realicen de manera ética y transparente. Estas políticas incluyen la formación continua de empleados y la realización de auditorías periódicas para asegurar el cumplimiento de los más altos estándares de integridad.">
+                    Ver más
+                </button>
+            </article>
+
+            <article class="action-item" id="responsabilidad-social">
+                <h2>Responsabilidad Social</h2>
+                <!-- Icono de Responsabilidad Social -->
+                <i class="fas fa-hands-helping icon" aria-label="Responsabilidad Social"></i>
+                <p>Iniciativas de SoftServe en apoyo a la comunidad y el bienestar social.</p>
+                <button class="more-info-btn" aria-label="Más información sobre Responsabilidad Social" 
+                    data-title="Responsabilidad Social" 
+                    data-text="SoftServe apoya diversas iniciativas sociales que promueven el bienestar de la comunidad, como programas educativos, iniciativas de salud pública y apoyo a organizaciones benéficas. La empresa participa activamente en proyectos locales e internacionales, brindando recursos y voluntarios para causas que fomentan el desarrollo social, la educación y la igualdad.">
+                    Ver más
+                </button>
+            </article>
+        </section>
+
+        <section class="charts">
+            <canvas id="carbonChart" width="400" height="200" aria-label="Gráfico de Emisiones de Carbono"></canvas>
+            <canvas id="trainingChart" width="400" height="200" aria-label="Gráfico de Entrenamientos en Derechos Humanos"></canvas>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Juan Vasquez. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-content">
+            <button class="close-btn" aria-label="Cerrar modal">&times;</button>
+            <h3 id="modal-title"></h3>
+            <p id="modal-text"></p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

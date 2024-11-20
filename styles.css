@@ -1,0 +1,178 @@
+/* Reset global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #00bcd4;
+    padding: 40px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+/* Main Layout */
+main {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Infographic Section */
+.infographic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-items: center;
+}
+
+.action-item {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.action-item:hover {
+    transform: translateY(-5px);
+}
+
+.action-item img {
+    max-width: 80px;
+    max-height: 80px;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0097a7;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 60%;
+}
+
+.modal h3 {
+    font-size: 1.9rem;
+    margin-bottom: 15px;
+}
+#modal-text{
+    font-size: 1.5rem;
+}
+.modal p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.close-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.close-btn:hover {
+    color: #0097a7;
+}
+
+/* Charts Section */
+.charts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.charts canvas {
+    width: 100% !important;
+    height: 400px !important;
+    max-width: 600px;
+}
+
+/* Footer */
+footer {
+    background-color: #00bcd4;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .infographic {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .action-item {
+        padding: 15px;
+    }
+
+    .modal-content {
+        width: 80%;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .charts {
+        flex-direction: column;
+    }
+}
